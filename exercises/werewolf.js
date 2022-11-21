@@ -1,7 +1,19 @@
 class Werewolf {
-  constructor(name) {
+  constructor(name, location, human = true, wolf = false) {
     this.name = name;
-    // this.statues = statues;
+    this.location = location;
+    this.human = human;
+    this.wolf = wolf;
+  }
+
+  change() {
+    if (this.wolf === true) {
+    this.wolf = false
+    this.human = true
+  } else {
+    this.human = false
+    this.wolf = true
+    }
   }
   // stare(person) {
   //   if (this.statues.length < 3) {

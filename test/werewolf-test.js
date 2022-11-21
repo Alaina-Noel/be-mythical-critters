@@ -13,30 +13,30 @@ describe('Werewolf', function() {
     assert.isObject(werewolf);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var werewolf = new Werewolf('Jorge');
     var werewolf2 = new Werewolf('Sal');
     assert.equal(werewolf.name, 'Jorge');
     assert.equal(werewolf2.name, 'Sal');
   });
 
-  it.skip('should have a location', function() {
+  it('should have a location', function() {
     var werewolf = new Werewolf('Horace','Basement lair');
     assert.equal(werewolf.location, 'Basement lair');
   });
 
-  it.skip('should default to human form', function() {
+  it('should default to human form', function() {
     var werewolf = new Werewolf('Mike','Basement lair');
     assert.equal(werewolf.human, true);
   });
 
-  it.skip('should refute human form after changing', function() {
+  it('should refute human form after changing', function() {
     var werewolf = new Werewolf('Steve', 'Gusto');
     werewolf.change();
     assert.equal(werewolf.human, false);
   });
 
-  it.skip('should show assert wolf form after change', function() {
+  it('should show assert wolf form after change', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto');
 
     assert.equal(werewolf.wolf, false);
@@ -44,7 +44,7 @@ describe('Werewolf', function() {
     assert.equal(werewolf.wolf, true);
   });
 
-  it.skip('should show what form its in', function() {
+  it('should show what form its in', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto');
 
     assert.equal(werewolf.wolf, false);
