@@ -1,9 +1,10 @@
 class Werewolf {
-  constructor(name, location, human = true, wolf = false) {
+  constructor(name, location, human = true, wolf = false, hungry = false) {
     this.name = name;
     this.location = location;
     this.human = human;
     this.wolf = wolf;
+    this.hungry = false;
   }
 
   change() {
@@ -13,19 +14,18 @@ class Werewolf {
   } else {
     this.human = false
     this.wolf = true
+    this.hungry = true
     }
   }
-  // stare(person) {
-  //   if (this.statues.length < 3) {
-  //     person.stoned = true
-  //     this.statues.push(person)
-  //   } else {
-  //     person.stoned = true
-  //     this.statues.push(person)
-  //     this.statues[0].stoned = false
-  //     this.statues.shift()
-  //   }
+  eat(victim) {
+    if (this.hungry === true) {
+      victim.alive = false
+      return 'YUM!'
+    } else {
+      return 'I cannot eat because I am not hungry.'
+    }
   }
+}
 
   // says(message) {
   //  return '**;* ' +message+' *;**' ;

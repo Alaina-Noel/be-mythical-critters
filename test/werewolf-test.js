@@ -58,19 +58,19 @@ describe('Werewolf', function() {
     assert.equal(werewolf.human, false);
   });
 
-  it.skip('should start off not hungry', function() {
+  it('should start off not hungry', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto')
     assert.equal(werewolf.hungry, false)
   });
 
-  it.skip('should become hungry after changing into werewolf form', function() {
+  it('should become hungry after changing into werewolf form', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto')
     werewolf.change()
 
     assert.equal(werewolf.hungry, true)
   });
 
-  it.skip('should be able to eat(victim) once hungry', function() {
+  it('should be able to eat(victim) once hungry', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto')
     var victim = new Victim('Jorge');
 
@@ -78,7 +78,6 @@ describe('Werewolf', function() {
     assert.equal(werewolf.eat(victim), 'I cannot eat because I am not hungry.')
     werewolf.change()
     assert.equal(werewolf.hungry, true)
-
 
     assert.equal(werewolf.eat(victim), 'YUM!')
     assert.equal(victim.alive, false)
