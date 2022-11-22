@@ -21,6 +21,7 @@ class Werewolf {
   eat(victim) {
     if (this.hungry === true) {
       victim.alive = false
+      this.change()
       return 'YUM!'
     } else {
       return 'I cannot eat because I am not hungry.'
