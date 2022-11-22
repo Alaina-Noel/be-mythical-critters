@@ -11,6 +11,7 @@ class Werewolf {
     if (this.wolf === true) {
     this.wolf = false
     this.human = true
+    this.hungry = false
   } else {
     this.human = false
     this.wolf = true
