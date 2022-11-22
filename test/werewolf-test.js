@@ -111,7 +111,7 @@ describe('Werewolf', function() {
     assert.equal(victim.alive, false)
   });
 
-  it.skip('should not be able to consume victim in human form', function() {
+  it('should not be able to consume victim in human form', function() {
     var werewolf = new Werewolf('Lousia', 'Gusto')
     var victim = new Victim('Jorge');
 
@@ -124,26 +124,26 @@ describe('Werewolf', function() {
 
 describe('Victim', function() {
 
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
     assert.isFunction(Victim);
   });
 
-  it.skip('should instantiate our good friend, Victim', function() {
+  it('should instantiate our good friend, Victim', function() {
     var victim = new Victim();
     assert.isObject(victim);
   });
 
-  it.skip('should have a name', function() {
+  it('should have a name', function() {
     var victim = new Victim('Jorge');
     assert.equal(victim.name, 'Jorge');
   });
 
-  it.skip('should start alive', function() {
+  it('should start alive', function() {
     var victim = new Victim('TayTay');
     assert.equal(victim.alive, true);
   });
 
-  it.skip('should be dead after being eaten', function() {
+  it('should be dead after being eaten', function() {
     var werewolf = new Werewolf('TayTay');
     var victim = new Victim('TayTay');
 
