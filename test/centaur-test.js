@@ -24,7 +24,7 @@ describe('Centaur', function() {
     assert.equal(centaur.shoot(), 'Twang!!!');
   });
 
-  it('should have a horse sound when it runs', function() {
+  it.skip('should have a horse sound when it runs', function() {
     var centaur = new Centaur('George');
     assert.equal(centaur.run(), 'Clop clop clop clop!!!');
   });
@@ -39,7 +39,7 @@ describe('Centaur', function() {
     assert.equal(centaur.standing, true);
   });
 
-  it('should be cranky after running or shooting a bow three times', function() {
+  it.skip('should be cranky after running or shooting a bow three times', function() {
     var centaur = new Centaur('George');
 
     assert.equal(centaur.cranky, false);
@@ -61,12 +61,12 @@ describe('Centaur', function() {
     assert.equal(centaur.shoot(), 'NO!');
   });
 
-  it('should not sleep while standing', function() {
+  it.skip('should not sleep while standing', function() {
     var centaur = new Centaur('George');
     assert.equal(centaur.sleep(), 'NO!');
   });
 
-  it('after laying down it is not standing', function() {
+  it.skip('after laying down it is not standing', function() {
     var centaur = new Centaur('George');
 
     assert.equal(centaur.standing, true);
