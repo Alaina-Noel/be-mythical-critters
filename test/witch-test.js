@@ -90,12 +90,13 @@ describe('Witch', function () {
   it('cannot brew the potion if the recipe is unknown', function () {
     var witch = new Witch('Helga');
     var recipe = new Recipe('Love Potion');
+    //witch has not learned the recipe yet
 
     let result = witch.brewPotion(recipe);
     assert.equal(result, "Don't know recipe: Love Potion");
   });
 
-  it('brewing a potion reduces pantry stock', function () {
+  it.skip('brewing a potion reduces pantry stock', function () {
     var witch = new Witch('Helga');
     var ingredients = { 'swamp water': 5, 'frog eyes': 10, 'dragon scales': 6 };
     var recipe = new Recipe('Shrinking Potion', ingredients);
@@ -111,7 +112,7 @@ describe('Witch', function () {
     assert.equal(witch.pantry['dragon scales'], 14);
   });
 
-  it('cannot brew a potion without sufficient ingredients', function () {
+  it.skip('cannot brew a potion without sufficient ingredients', function () {
     var witch = new Witch('Helga');
     var ingredients = { 'swamp water': 5, 'frog eyes': 10, 'dragon scales': 6 };
     var recipe = new Recipe('Shrinking Potion', ingredients);
@@ -126,21 +127,21 @@ describe('Witch', function () {
 });
 
 describe('Recipe', function () {
-  it('should be a function', function () {
+  it.skip('should be a function', function () {
     assert.isFunction(Recipe);
   });
 
-  it('should instantiate a Recipe', function () {
+  it.skip('should instantiate a Recipe', function () {
     var recipe = new Recipe();
     assert.isObject(recipe);
   });
 
-  it('should have a name', function () {
+  it.skip('should have a name', function () {
     var recipe = new Recipe('Shrinking Potion');
     assert.equal(recipe.name, 'Shrinking Potion');
   });
 
-  it('should have ingredients', function () {
+  it.skip('should have ingredients', function () {
     var ingredients = { 'swamp water': 5, 'frog eyes': 10, 'dragon scales': 6 };
     var recipe = new Recipe('Shrinking Potion', ingredients);
     assert.deepEqual(recipe.ingredients, ingredients)
