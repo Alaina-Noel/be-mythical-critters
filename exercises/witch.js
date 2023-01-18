@@ -31,15 +31,21 @@ class Witch {
   }
 
   brewPotion(recipe) {
-    //run a check to see if the witch has learned this recipe
-    console.log("potions",this.potions,"recipes", this.recipes)
-    if (this.potions[recipe.name]) {
-      this.potions[recipe.name] += 1;
-      return `Brewed 1 ${recipe.name}`
-    } else {
-      this.potions[recipe.name] = 1;
-      return `Brewed 1 ${recipe.name}`
+    for (const [ingredient, quantity] of Object.entries(recipe.ingredients)) {
+      console.log(ingredient)
+      if (this.pantry[ingredient] <= quantity) {
+        return "I can't brew that Potion"
+      } else {
+        if (this.potions[recipe.name]) {
+          this.potions[recipe.name] += 1;
+          this.pantry[ingredient] -= quantity;
+        } else {
+          this.potions[recipe.name] = 1;
+          this.pantry[ingredient] -= quantity;
+        }
+      }
     }
+    return `Brewed 1 ${recipe.name}`
   }
 
 }
